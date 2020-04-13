@@ -109,4 +109,19 @@ $(document).ready(function() {
       offset: "50%"
     }
   );
+
+  // Mobile Nav
+  $(".js--nav-icon").click(function() {
+    const nav = $(".js--main-nav");
+    const icon = $(".js--nav-icon ion-icon");
+    const attr = icon.attr("name");
+
+    nav.slideToggle(200);
+
+    if (attr === "reorder-three-outline") {
+      icon.attr("name", "close-outline");
+    } else {
+      icon.attr("name", "reorder-three-outline");
+    }
+  });
 });
